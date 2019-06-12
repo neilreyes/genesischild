@@ -175,9 +175,19 @@ function ray_typography_enqueue_font_script()
 {
 	$heading_font = esc_html(get_theme_mod('ray_typography_heading_setting'));
 	$body_font = esc_html(get_theme_mod('ray_typography_body_setting'));
+	$fonts = '';
 
-	wp_enqueue_style('ray-heading-font', 'https://fonts.googleapis.com/css?family=' . $heading_font);
-	wp_enqueue_style('ray-body-font', 'https://fonts.googleapis.com/css?family=' . $body_font);
+	if( $heading_font == $body_font  ){
+		$fonts = $heading_font;
+	} else if ( $heading_font ){
+		$fonts = $heading_font;
+	} else if ( $body_font ){
+		$fonts = $body_font;
+	} else if ( $heading_font && $body_font ){
+		$fonts = $heading_font . '|' . $body_font;
+	}
+
+	wp_enqueue_style('ray-fonts', 'https://fonts.googleapis.com/css?family=' . $fonts );
 };
 
 add_action('wp_enqueue_scripts', 'ray_typography_enqueue_font_script');
@@ -197,15 +207,13 @@ function ray_typography_generate_live_css()
 		$font_pieces = explode(":", $body_font);
 		$body_font_style = "p, a, li, span, label { font-family: '" . $font_pieces[0] . "'; }" . "\n";
 	}
-	?>
-
-	<style>
-		<?php echo $body_font_style;
-		echo $heading_font_style;
-		?>
-	</style>
-
-<?php
+	
+	if( $heading_font || $body_font ):
+		echo '<style type="text/css">';
+		if( $heading_font ){ echo $body_font_style; }
+		if( $body_font ){ echo $heading_font_style; }
+		echo '</style><!-- /Customizer font -->';
+	endif;
 }
 
 add_action('wp_head', 'ray_typography_generate_live_css');
