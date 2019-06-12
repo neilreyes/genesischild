@@ -1,0 +1,20 @@
+.site-header{
+	width: 100%;
+	position: fixed;
+    z-index: 1801;
+    left: 0;
+    top: 0;
+	backface-visibility: hidden;
+	@extend .trans-all-3s-ease-in-out !optional;
+
+	.wrap{
+		padding: 20px;
+		@extend .d-flex;
+		@extend .j-content-space-between;
+	}
+}
+
+.sticky{
+	background: #fff;
+	box-shadow: 0 0 10px 3px rgba(0,0,0,0.2);
+}

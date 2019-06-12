@@ -1,0 +1,100 @@
+
+div.wpforms-container-full{
+    .wpforms-field-container{
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .wpforms-form{
+        .wpforms-field{
+            input,
+            input[type=date],
+            input[type=datetime],
+            input[type=datetime-local],
+            input[type=email],
+            input[type=month],
+            input[type=number],
+            input[type=password],
+            input[type=range],
+            input[type=search],
+            input[type=tel],
+            input[type=text],
+            input[type=time],
+            input[type=url],
+            input[type=week],
+            select{
+                height: 50px;
+            }
+
+            input,
+            select,
+            textarea{
+				border-radius: 10px !important;
+				
+				&::placeholder{
+					font-family: "Montserrat", sans-serif;
+				}
+			}
+			
+			&.wpforms-field-textarea{
+				padding: 0;
+			}
+
+        }
+
+        div[data-field-id="0"]{
+            width: 100%;
+        }
+
+        div[data-field-id="1"]{
+            width: 100%;
+        }
+
+        div[data-field-id="2"]{
+			padding: 5px 0 !important;
+            width: 100%;
+        }
+
+		div[data-field-id="3"],
+		div[data-field-id="4"]{
+            width: 100%;
+        }
+
+        .wpforms-submit-container{
+            button,
+            input,
+            button[type="submit"],
+            input[type="submit"]{
+				color: #ffffff;
+                border-radius: 10px;
+                background: $primary;
+                border: 0px none rgba(0,0,0,0);
+                padding: 15px 20px;
+                @extend .trans-all-3s-ease-in-out !optional;
+
+                &:hover,
+                &:focus,
+                &:active{
+                    background: $primary-hover;
+                    border: 0px none rgba(0,0,0,0);
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px){
+            div[data-field-id="1"]{
+                width: 50%;
+                padding: 0 5px 0 0;
+            }
+
+            div[data-field-id="3"]{
+                width: 50%;
+                padding: 0 0 0 0px;
+			}
+
+			div[data-field-id="4"]{
+                width: 100%;
+            }
+        }
+    }
+}

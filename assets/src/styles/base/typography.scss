@@ -1,0 +1,102 @@
+
+.section-headline{
+    font-size: 35px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-uppercase{
+	text-transform: uppercase;
+}
+
+.font-weight{
+	font-weight: normal;
+}
+
+p,li,label,figcaption,span{
+	color: #878787;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+a{
+	@extend .trans-all-3s-ease-in-out;
+	color: $primary;
+
+	&:hover,
+	&:active,
+	&:focus{
+		color: $primary-hover;
+	}
+}
+
+.lead{
+	font-size: 18px;
+	color: $black1;
+}
+
+h1{
+	@extend .font-weight;
+}
+
+h2{
+	@extend .font-weight;
+}
+
+h3{
+	@extend .font-weight;
+}
+
+h4{
+	@extend .font-weight;
+}
+
+h5{
+	@extend .font-weight;
+}
+
+h6{
+	@extend .font-weight;
+}
+
+figcaption{
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+}
+
+blockquote{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	color: $black1;
+    font-size: 14px;
+	line-height: 25px;
+	position: relative;
+	padding-top: 55px;
+	font-weight: 700;
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 64px;
+		height: 41px;
+		background: url(images/icon-sprites.svg) no-repeat scroll -45px -69px/293px transparent;
+	}
+}
+
+.aligncenter{
+	@extend .text-center;
+}

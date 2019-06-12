@@ -1,0 +1,60 @@
+.btn{
+    border: 0;
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+	text-decoration: none;
+	margin: 8px;
+
+    &-primary{
+		border: 0;
+		font-size: 18px;
+        color: #fff; // customize via theme_mod
+        background: $primary; // customize via theme_mod
+        font-weight: bold; // customize via theme_mod
+        font-size: 15px; // customize via theme_mod
+		padding: 15px 28px; // c theme mod
+		border-radius: 50px;
+        @extend .trans-all-3s-ease-in-out !optional;
+
+        &:hover,
+        &:active,
+        &:focus{
+            background: $primary-hover;
+        }
+    }
+
+    &:hover,
+    &:active,
+    &:focus{
+        text-decoration: none;
+    }
+}
+
+button{
+    @extend .btn !optional;
+    @extend .btn-primary !optional;
+    margin-bottom: 10px;
+}
+
+.post-edit-link{
+    color: #ffffff;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: $primary;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1900;
+    @extend .trans-3s-ease-in-out !optional;
+
+    &:hover,
+    &:focus,
+    &:active{
+        background: $primary-hover;
+    }
+
+    @media screen and (min-width: 1200px){
+        top: 65px;
+        bottom: inherit;
+    }
+}
