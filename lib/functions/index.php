@@ -27,6 +27,9 @@ function ray_render_mobile_menu()
 // Site branding with image
 function ray_site_branding()
 {
+	$custom_logo_id = get_theme_mod('custom_logo');
+	$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+
 	genesis_markup(
 		array(
 			'open'    => '<div %s>',
@@ -36,7 +39,13 @@ function ray_site_branding()
 
 	echo wp_sprintf('<a href="%s" class="site-branding-link">', esc_url('/'));
 
-	echo wp_sprintf('<img src="%s" alt="%s" class="site-logo"/>', esc_url(get_stylesheet_directory_uri() . '/assets/dist/images/logo.svg' ), esc_attr('site branding'));
+	if( has_custom_logo() ){
+
+		echo get_custom_logo();
+
+	} else {
+		echo wp_sprintf('<img src="%s" alt="%s" class="site-logo"/>', esc_url(get_stylesheet_directory_uri() . '/assets/dist/images/logo.svg'), esc_attr('site branding'));
+	}
 
 	echo '</a>';
 

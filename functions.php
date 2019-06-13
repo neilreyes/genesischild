@@ -25,11 +25,17 @@ include_once(get_stylesheet_directory() . '/lib/acf/blocks.php');
 // Enqueue Scripts
 function ray_load_scripts()
 {
+	wp_dequeue_script( 'rayneils-theme-css');
+
+	wp_deregister_style( 'rayneils-theme-css');
+
 	wp_enqueue_style('ray-theme-style', get_stylesheet_directory_uri() . '/assets/dist/main.css', array(), null, null);
 
 	wp_enqueue_script('ray-theme-script', get_stylesheet_directory_uri() . '/assets/dist/main.js', array('jquery'), null, true);
 
 	wp_register_script('google-apis-map-script', 'https://maps.googleapis.com/maps/api/js?key=' . GOOGLE_API_KEY , array(), false, true);
+
+	wp_enqueue_script('google-apis-maps-script');
 }
 
 add_action('wp_enqueue_scripts', 'ray_load_scripts');

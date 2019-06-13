@@ -30,7 +30,7 @@ body {
 .site-inner {
   min-height: 768px; }
 
-.container, .wrap {
+.container, .wrap, .alignwide {
   max-width: 100%;
   margin: 0 auto;
   padding-left: 15px;
@@ -38,18 +38,18 @@ body {
   padding-top: 50px;
   padding-bottom: 50px; }
   @media screen and (min-width: 768px) {
-    .container, .wrap {
+    .container, .wrap, .alignwide {
       padding-left: 80px;
       padding-right: 80px; } }
   @media screen and (min-width: 992px) {
-    .container, .wrap {
+    .container, .wrap, .alignwide {
       padding-left: 15px;
       padding-right: 15px;
       max-width: 912px;
       padding-top: 50px;
       padding-bottom: 50px; } }
   @media screen and (min-width: 1200px) {
-    .container, .wrap {
+    .container, .wrap, .alignwide {
       max-width: 1120px; } }
 
 .wrap {
@@ -78,6 +78,11 @@ body {
   width: 100%; }
   .spacer-50 {
     padding: 25px; }
+
+.alignfull {
+  margin: 0 auto;
+  max-width: 100vw;
+  width: 100vw; }
 
 /* Effects */
 .circle-with-purple-shadow {
@@ -236,7 +241,8 @@ blockquote {
   background: #fff;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2); }
 
-.site-logo {
+.site-logo,
+.custom-logo-link {
   width: 100%; }
 
 .site-branding {
