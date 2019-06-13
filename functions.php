@@ -1,4 +1,6 @@
 <?php
+
+require_once( get_stylesheet_directory() . '/config/key.php' );
 // Load theme functions
 require_once(get_stylesheet_directory() . '/lib/functions/index.php');
 
@@ -27,7 +29,7 @@ function ray_load_scripts()
 
 	wp_enqueue_script('ray-theme-script', get_stylesheet_directory_uri() . '/assets/dist/main.js', array('jquery'), null, true);
 
-	wp_register_script('google-apis-map-script', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyALVDWH0Y6hEuqurGEM_qcGzKtKJ1qeIrY ', array(), false, true);
+	wp_register_script('google-apis-map-script', 'https://maps.googleapis.com/maps/api/js?key=' . GOOGLE_API_KEY , array(), false, true);
 }
 
 add_action('wp_enqueue_scripts', 'ray_load_scripts');
