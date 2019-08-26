@@ -1,6 +1,6 @@
 <?php
 // Add inner-page class to body if page is not front page
-function edugap_body_classes($classes)
+function ray_body_classes($classes)
 {
 	if (!is_front_page()) {
 		$classes[] = "inner-page";
@@ -8,7 +8,7 @@ function edugap_body_classes($classes)
 	return $classes;
 }
 
-add_filter('body_class', 'edugap_body_classes');
+add_filter('body_class', 'ray_body_classes');
 
 // Mobile Navigation
 function ray_render_mobile_menu()
