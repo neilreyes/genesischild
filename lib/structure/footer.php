@@ -24,13 +24,11 @@ function ray_footer_credit_filter($credits)
 {
 	$year = date('Y');
 
-	$credits = wp_sprintf(
-		'©%s Ray Child Theme.<br/>All Rights Reserved<br/>Powered by <a href="%s" rel="nofollow" target="_blank">Hey Roboto</a>',
-		$year,
-		esc_url('https://www.heyroboto.com/')
-	);
+	$credits = wp_kses_post(genesis_get_option('footer_text'));
 
-	return $credits;
+	$output = '<p>' . genesis_strip_p_tags($credits) . '</p>';
+
+	return $output;
 }
 
 function ray_do_footer()
