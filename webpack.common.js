@@ -1,10 +1,8 @@
 // webpack v4
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackMd5Hash = require("webpack-md5-hash");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const autoprefixer = require("autoprefixer");
 
 module.exports = {
     entry: {
@@ -14,7 +12,6 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "assets/dist"),
         filename: "[name].js"
-        /* filename: "[name].[hash].js" */
     },
     devServer: {
         contentBase: "./assets/dist",
@@ -92,16 +89,8 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "[name].css"
-            /* filename: "style.[contenthash].css" */
         }),
-        /*  new CleanWebpackPlugin("dist", {}),
-        
-        new HtmlWebpackPlugin({
-            inject: false,
-            hash: true,
-            template: "./src/index.html",
-            filename: "index.html"
-        }), */
+        new CleanWebpackPlugin("dist", {}),
         new WebpackMd5Hash()
     ]
 };
