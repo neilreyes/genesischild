@@ -1,5 +1,6 @@
 <?php
 
+require_once( get_stylesheet_directory() . '/admin/admin.php' );
 require_once( get_stylesheet_directory() . '/config/key.php' );
 // Load theme functions
 require_once(get_stylesheet_directory() . '/lib/functions/index.php');

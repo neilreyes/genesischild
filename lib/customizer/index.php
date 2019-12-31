@@ -173,17 +173,12 @@ function ray_sanitize_fonts($input)
 
 function ray_typography_enqueue_font_script()
 {
-	$heading_font = esc_html(get_theme_mod('ray_typography_heading_setting'));
-	$body_font = esc_html(get_theme_mod('ray_typography_body_setting'));
-	$fonts = '';
+	$heading_font = esc_html(get_theme_mod('ray_typography_heading_setting','Open Sans:400italic,700italic,400,700'));
+	$body_font = esc_html(get_theme_mod('ray_typography_body_setting','Open Sans:400italic,700italic,400,700'));
 
 	if( $heading_font == $body_font  ){
 		$fonts = $heading_font;
-	} else if ( $heading_font ){
-		$fonts = $heading_font;
-	} else if ( $body_font ){
-		$fonts = $body_font;
-	} else if ( $heading_font && $body_font ){
+	} else{
 		$fonts = $heading_font . '|' . $body_font;
 	}
 
