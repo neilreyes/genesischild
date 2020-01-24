@@ -3,7 +3,7 @@ import Slideout from "slideout";
 const initMobileNavi = () => {
     const slideout = new Slideout({
         panel: document.querySelector(".site-container"),
-        menu: document.querySelector("#menu"),
+        menu: document.querySelector("#mobile-menu"),
         padding: 256,
         tolerance: 70,
         easing: "ease-in-out",
@@ -15,7 +15,9 @@ const initMobileNavi = () => {
 
     let toggleButton = document.querySelector(".toggle-button");
     let closeMobNavi = document.querySelector(".close-mob-navi");
-    let mobileNaviButtons = document.querySelectorAll(".nav-secondary li > a");
+    let mobileNaviButtons = document.querySelectorAll(
+        "#nav-mobile-menu > ul li > a"
+    );
 
     mobileNaviButtons.forEach(element => {
         element.addEventListener("click", event => {

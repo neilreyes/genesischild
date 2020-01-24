@@ -69,62 +69,6 @@
 		'settings'  => 'ray_typography_body_setting',
 		'choices'   => $font_choices
 	));
-
-	// Color Section
-	$wp_customize->add_section('ray_theme_color_section', array(
-		'title'     => __('Site Color', 'edugap'),
-		'priority'  => 25,
-	));
-
-	// Color Settings for Primary, Secondary & Tertiary
-	$wp_customize->add_setting('ray_theme_primary_color_setting', array(
-		'transport' => 'refresh',
-		'default' => '#0085ba',
-		'sanitize_callback' => 'sanitize_hex_color'
-	));
-
-	$wp_customize->add_setting('ray_theme_secondary_color_setting', array(
-		'transport' => 'refresh',
-		'default' => '#826EB4',
-		'sanitize_callback' => 'sanitize_hex_color'
-	));
-
-	$wp_customize->add_setting('ray_theme_tertiary_color_setting', array(
-		'transport' => 'refresh',
-		'default' => '#46B450',
-		'sanitize_callback' => 'sanitize_hex_color'
-	));
-
-	// Color Controls for Primary, Secondary & Tertiary
-	$wp_customize->add_control(new WP_Customize_Color_Control(
-		$wp_customize,
-		'ray_theme_primary_color',
-		array(
-			'label' => 'Primary Color',
-			'section' => 'ray_theme_color_section',
-			'settings' => 'ray_theme_primary_color_setting',
-		)
-	));
-
-	$wp_customize->add_control(new WP_Customize_Color_Control(
-		$wp_customize,
-		'ray_theme_secondary_color',
-		array(
-			'label' => 'Secondary Color',
-			'section' => 'ray_theme_color_section',
-			'settings' => 'ray_theme_secondary_color_setting',
-		)
-	));
-
-	$wp_customize->add_control(new WP_Customize_Color_Control(
-		$wp_customize,
-		'ray_theme_tertiary_color',
-		array(
-			'label' => 'Tertiary Color',
-			'section' => 'ray_theme_color_section',
-			'settings' => 'ray_theme_tertiary_color_setting',
-		)
-	));
 };
 
 add_action('customize_register', 'ray_customize_register');

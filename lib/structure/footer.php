@@ -66,7 +66,7 @@ function ray_footer_credit()
 
 	echo apply_filters('genesis_footer_output', $output, $backtotop_text, $creds_text); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
-	ray_site_branding();
+	ray_footer_branding();
 
 	echo '</div>';
 }

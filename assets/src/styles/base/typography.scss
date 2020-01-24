@@ -24,49 +24,63 @@
 }
 
 p,li,label,figcaption,span{
-	color: #878787;
-    font-size: 14px;
+	font-size: 14px;
     line-height: 25px;
 }
 
 a{
+	outline: 0;
 	@extend .trans-all-3s-ease-in-out;
-	color: $primary;
 
-	&:hover,
 	&:active,
 	&:focus{
-		color: $primary-hover;
+		outline: 0;
+		box-shadow: 0 0 0 0 rgba(0,0,0,0);
 	}
 }
 
 .lead{
+	color: $lead;
 	font-size: 18px;
-	color: $black1;
+	line-height: 27px;
 }
 
 h1{
+	font-size: 40px;
+	font-weight: bold;
 	@extend .font-weight;
+	margin: auto;
+	line-height: auto;
 }
 
 h2{
 	@extend .font-weight;
+	margin: auto;
+	line-height: auto;
 }
 
 h3{
 	@extend .font-weight;
+	margin: auto;
+	line-height: auto;
 }
 
 h4{
 	@extend .font-weight;
+	margin: auto;
+	line-height: auto;
 }
 
 h5{
 	@extend .font-weight;
+	margin: auto;
+	line-height: auto;
 }
 
 h6{
 	@extend .font-weight;
+	margin: auto;
+	line-height: auto;
 }
 
 figcaption{

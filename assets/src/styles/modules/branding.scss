@@ -1,12 +1,24 @@
 .site-logo,
 .custom-logo-link{
 	width: 100%;
+	display: inline-block;
 }
 
 .site-branding{
-	width: 50px;
+	width: 175px;
 }
 
 .site-branding-link{
 	display: inline-block;
+}
+
+.footer-branding-permalink{
+	padding: 8px;
+	box-sizing: border-box;
+	display: inline-block;
+	width: 80px;
+}
+
+.footer-branding-image{
+	width: 100%;
 }

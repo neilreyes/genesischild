@@ -1,0 +1,43 @@
+.slick-arrow{
+	border: 3px solid $primary;
+	background: #fff;
+	color: $primary;
+	text-indent: -9999px;
+    position: absolute;
+    z-index: 30;
+    top: 50%;
+    padding: 12px 22px;
+    margin-top: -10%;
+}
+
+.slick-next{
+	right: -32px;
+    left: initial;
+}
+
+.slick-prev{
+    left: -37px;
+}
+
+.slick-dots{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	justify-content: center;
+
+	@media screen and (min-width: 992px){
+		justify-content: flex-start;
+	}
+}
+
+.slick-slide{
+	blockquote{
+		box-sizing: border-box;
+		padding: 10px 35px;
+
+		@media screen and (min-width: 768px){
+			padding: 10px 50px;
+		}
+	}
+}

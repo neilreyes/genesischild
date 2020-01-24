@@ -24,10 +24,14 @@ body{
 }
 
 .site-container{
+	overflow: hidden;
     background-color: #ffffff;
     width: 100%;
-    margin: 0 auto;
-
+	margin: 0 auto;
+	
+	@media screen and (min-width: 992px){
+		overflow: auto;
+	}
     @media screen and (min-width: 1200px){
         //max-width: 1530px;
         //box-shadow: 0 0 10px 3px rgba(0,0,0,0.2);
@@ -171,19 +175,6 @@ body{
     align-items: flex-end;
 }
 
-.toggle-button{
-	padding: 15px 19px;
-    position: fixed;
-    z-index: 1991;
-    top: 20px;
-    right: 20px;
-    display: block;
-
-    @media screen and (min-width: 1200px){
-        display: none;
-    }
-}
-
 .note{
 	@extend .rounded-with-purple-shadow;
 	font-size: 18px;
@@ -218,4 +209,10 @@ body{
 		height: 116px;
 		top: -120px;
 	}
+}
+
+.lead{
+	color: $lead;
+	font-size: 18px;
+	line-height: 27px;
 }

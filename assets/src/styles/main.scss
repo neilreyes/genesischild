@@ -3,6 +3,11 @@
 @import 'base/grid',
 		'base/typography',
 		'base/wordpress-core';
+		
+@import 'vendor/lightgallery',
+		'vendor/slick',
+		'vendor/slideout',
+		'vendor/swiper';
 
 @import 'layout/cta',
 		'layout/facts',
@@ -20,11 +25,8 @@
 		'modules/social-media',
 		'modules/tabs';
 
-@import 'vendor/lightgallery',
-		'vendor/slideout',
-		'vendor/swiper';
-
 @import 'vendor-extensions/lightgallery',
+		'vendor-extensions/slick',
 		'vendor-extensions/slideout',
 		'vendor-extensions/swiper',
 		'vendor-extensions/wpforms';

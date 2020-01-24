@@ -348,7 +348,7 @@ var slideout_default = /*#__PURE__*/__webpack_require__.n(node_modules_slideout)
 var slideout_initMobileNavi = function initMobileNavi() {
   var slideout = new slideout_default.a({
     panel: document.querySelector(".site-container"),
-    menu: document.querySelector("#menu"),
+    menu: document.querySelector("#mobile-menu"),
     padding: 256,
     tolerance: 70,
     easing: "ease-in-out",
@@ -358,7 +358,7 @@ var slideout_initMobileNavi = function initMobileNavi() {
   var fixed = document.querySelector(".site-header");
   var toggleButton = document.querySelector(".toggle-button");
   var closeMobNavi = document.querySelector(".close-mob-navi");
-  var mobileNaviButtons = document.querySelectorAll(".nav-secondary li > a");
+  var mobileNaviButtons = document.querySelectorAll("#nav-mobile-menu > ul li > a");
   mobileNaviButtons.forEach(function (element) {
     element.addEventListener("click", function (event) {
       slideout.close();

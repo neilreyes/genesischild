@@ -1,6 +1,6 @@
 .btn{
     border: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: inline-block;
 	text-decoration: none;
 	margin: 8px;
@@ -30,6 +30,34 @@
     }
 }
 
+.menu-item.btn-blue{
+	margin: 0 8px;
+
+	a{
+		border-radius: 50px;
+		color: #fff;
+		background-color: blue;
+
+		> span{
+			color: #fff;
+		}
+	}
+}
+
+.menu-item.btn-green{
+	margin: 0 8px;
+
+	a{
+		border-radius: 50px;
+		color: #fff;
+		background-color: green;
+
+		> span{
+			color: #fff;
+		}
+	}
+}
+
 button{
     @extend .btn !optional;
     @extend .btn-primary !optional;
@@ -57,4 +85,43 @@ button{
         top: 65px;
         bottom: inherit;
     }
+}
+
+.toggle-button{
+	border-radius: 50%;
+	background-color: $primary;
+	padding: 15px 19px;
+    position: fixed;
+    z-index: 1991;
+    top: 2px;
+    right: 0px;
+    display: block;
+
+    @media screen and (min-width: 992px){
+        display: none;
+    }
+}
+
+.tb-line{
+	width: 18px;
+    margin: 5px 0;
+    height: 2px;
+	background: #fff;
+	transition: all 0.1s ease-in-out;
+	transform: rotate(0deg);
+	opacity: 1;
+}
+
+.slideout-open{
+	.tb-line-mid{
+		opacity: 0;
+	}
+
+	.tb-line-top{
+		transform: rotate(45deg) translate(6px, 4px);
+	}
+
+	.tb-line-bottom{
+		transform: rotate(-45deg) translate(5px,-4px);
+	}
 }
